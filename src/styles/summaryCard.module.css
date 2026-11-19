@@ -1,0 +1,86 @@
+.summaryCard {
+  flex: 1;
+  padding: 22px 24px;
+}
+
+.summaryCard + .summaryCard {
+  border-left: 1px solid var(--border-color);
+}
+
+.title {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.mainItem {
+  margin-top: 12px;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.subscriptionName {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+}
+
+.subscriptionInfo {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.5px;
+}
+
+.amount {
+  color: var(--text-primary);
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 51px;
+  letter-spacing: -1.53px;
+}
+
+.changeSubtitle {
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.5px;
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.positive {
+  color: var(--positive-green);
+}
+
+.negative {
+  color: var(--negative-red);
+}
+
+.subscriptionSubtitle {
+  margin-top: 18px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.5px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.5px;
+}

@@ -1,0 +1,163 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  padding: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.addSubscriptionCard {
+  border-radius: var(--section-border-radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 24px;
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.5px;
+  letter-spacing: -0.475px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputLabel {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.input {
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  outline: none;
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-border-radius);
+  background-color: var(--input-background);
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+}
+
+.cycleSwitch {
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-border-radius);
+  background-color: #f5f5f2;
+  padding: 1px;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  position: relative;
+}
+
+.cycleSwitch > div {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(50% - 1px);
+  height: calc(100% - 2px);
+  border-radius: 5px;
+  background: color(srgb 1 1 1);
+  box-shadow: 0 1px 2px 0 color(srgb 0 0 0 / 0.06);
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cycleSwitch > div.moveRight {
+  transform: translateX(100%);
+}
+
+.cycleSwitch > p {
+  color: var(--text-secondary);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  flex: 1;
+  z-index: 2;
+}
+
+.cycleSwitch > p.positive {
+  color: var(--text-primary);
+}
+
+.buttons {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+.button {
+  padding: 9px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.cancel {
+  color: var(--text-secondary);
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+}
+
+.submit {
+  color: var(--text-button);
+  background-color: var(--button-background);
+}
