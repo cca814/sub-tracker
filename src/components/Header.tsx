@@ -2,15 +2,9 @@ import Image from "next/image";
 import styles from "@/styles/header.module.css";
 import siteIcon from "@/assets/siteIcon.svg";
 import searchIcon from "@/assets/searchIcon.svg";
-import plusIcon from "@/assets/plusIcon.svg";
+import AddSubscriptionControl from "./AddSubscriptionControl";
 
-interface HeaderProps {
-  onAddSubscriptionButtonClick: () => void;
-}
-
-export default function Header({
-  onAddSubscriptionButtonClick,
-}: HeaderProps) {
+export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.siteInfo}>
@@ -37,20 +31,7 @@ export default function Header({
           placeholder="Search"
         />
       </div>
-      <button
-        type="button"
-        className={styles.plusButton}
-        onClick={onAddSubscriptionButtonClick}
-      >
-        <Image
-          src={plusIcon}
-          alt=""
-          className={styles.plusIcon}
-          height={16}
-          width={16}
-        />
-        <p className={styles.plusDescription}>Add Subscription</p>
-      </button>
+      <AddSubscriptionControl />
     </header>
   );
 }
