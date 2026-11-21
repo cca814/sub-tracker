@@ -1,5 +1,6 @@
 import styles from "@/styles/addSubscriptionCard.module.css";
 import { useEffect, useState } from "react";
+import DatePicker from "./DatePicker";
 
 interface AddSubscriptionCardProps {
   onClose: () => void;
@@ -72,7 +73,7 @@ export default function AddSubscriptionCard({
             <label htmlFor="date" className={styles.inputLabel}>
               Next billing date
             </label>
-            <input id="date" name="date" type="date" className={styles.input} />
+            <DatePicker id="date" name="date" />
           </div>
         </div>
         <div className={styles.buttons}>

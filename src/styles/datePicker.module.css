@@ -1,0 +1,90 @@
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-border-radius);
+  background: var(--input-background);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.trigger svg, .placeholder { color: var(--text-secondary); }
+.trigger:hover { border-color: var(--text-secondary); }
+.trigger:focus-visible, .trigger[aria-expanded="true"] {
+  outline: none;
+  border-color: var(--button-background);
+  box-shadow: 0 0 0 3px rgb(79 70 229 / 12%);
+}
+
+.popover {
+  z-index: 1010;
+  width: 300px;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--background);
+  color: var(--text-primary);
+  box-shadow: 0 12px 36px rgb(23 23 23 / 14%), 0 2px 6px rgb(23 23 23 / 4%);
+}
+
+.popover .calendar {
+  --rdp-accent-color: var(--button-background);
+  --rdp-accent-background-color: #eeecff;
+  --rdp-day-width: 38px;
+  --rdp-day-height: 36px;
+  --rdp-day_button-width: 34px;
+  --rdp-day_button-height: 34px;
+  --rdp-day_button-border-radius: 7px;
+  --rdp-nav_button-width: 30px;
+  --rdp-nav_button-height: 30px;
+  --rdp-nav-height: 36px;
+  --rdp-outside-opacity: 0.35;
+  font-size: 12px;
+}
+
+.calendar :global(.rdp-months), .calendar :global(.rdp-month) { width: 100%; }
+.calendar :global(.rdp-month_grid) { width: 100%; }
+.calendar :global(.rdp-caption_label) { font-size: 13px; font-weight: 600; }
+.calendar :global(.rdp-weekday) { font-size: 11px; font-weight: 500; color: var(--text-secondary); }
+.calendar :global(.rdp-day_button) { margin: auto; font: inherit; }
+.calendar :global(.rdp-day_button):hover { background: #eeecff; }
+.calendar :global(.rdp-selected) :global(.rdp-day_button) {
+  background: var(--button-background);
+  color: white;
+  font-weight: 600;
+}
+.calendar :global(.rdp-button_previous):hover,
+.calendar :global(.rdp-button_next):hover { background: #eeecff; border-radius: 6px; }
+.popover button:focus-visible { outline: 2px solid var(--button-background); outline-offset: 2px; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+.footer button {
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--button-background);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.footer button:hover { background: #eeecff; }
