@@ -1,6 +1,7 @@
 "use client";
 import styles from "@/styles/subscriptionTable.module.css";
 import { useState } from "react";
+import SubscriptionStatusSwitch from "./SubscriptionStatusSwitch";
 
 export default function SubscriptionTable() {
   const [isPositive, setIsPositive] = useState(true);
@@ -26,17 +27,10 @@ export default function SubscriptionTable() {
         <div className={styles.tableItemValue}>Monthly</div>
         <div className={styles.tableItemValue}>Jun 15, 2025</div>
         <div className={styles.subscriptionItemPrice}>$15.99</div>
-        <div
-          className={`${styles.subscriptionItemStatus} ${isPositive ? styles.positive : styles.negative}`}
-        >
-          <button
-            className={styles.subscriptionItemStatusSwitch}
-            onClick={() => setIsPositive((prev) => !prev)}
-          >
-            <div />
-          </button>
-          {isPositive ? "Active" : "Paused"}
-        </div>
+        <SubscriptionStatusSwitch
+          isActive={isPositive}
+          onToggle={() => setIsPositive((prev) => !prev)}
+        />
       </div>
 
       <div className={styles.tableItem}>
@@ -47,17 +41,10 @@ export default function SubscriptionTable() {
         <div className={styles.tableItemValue}>Monthly</div>
         <div className={styles.tableItemValue}>Jun 15, 2025</div>
         <div className={styles.subscriptionItemPrice}>$15.99</div>
-        <div
-          className={`${styles.subscriptionItemStatus} ${isPositive ? styles.positive : styles.negative}`}
-        >
-          <button
-            className={styles.subscriptionItemStatusSwitch}
-            onClick={() => setIsPositive((prev) => !prev)}
-          >
-            <div />
-          </button>
-          {isPositive ? "Active" : "Paused"}
-        </div>
+        <SubscriptionStatusSwitch
+          isActive={isPositive}
+          onToggle={() => setIsPositive((prev) => !prev)}
+        />
       </div>
 
       <div className={styles.tableItem}>
@@ -68,17 +55,10 @@ export default function SubscriptionTable() {
         <div className={styles.tableItemValue}>Monthly</div>
         <div className={styles.tableItemValue}>Jun 15, 2025</div>
         <div className={styles.subscriptionItemPrice}>$15.99</div>
-        <div
-          className={`${styles.subscriptionItemStatus} ${isPositive ? styles.positive : styles.negative}`}
-        >
-          <button
-            className={styles.subscriptionItemStatusSwitch}
-            onClick={() => setIsPositive((prev) => !prev)}
-          >
-            <div />
-          </button>
-          {isPositive ? "Active" : "Paused"}
-        </div>
+        <SubscriptionStatusSwitch
+          isActive={isPositive}
+          onToggle={() => setIsPositive((prev) => !prev)}
+        />
       </div>
 
       <div className={styles.tableItem}>
@@ -89,17 +69,10 @@ export default function SubscriptionTable() {
         <div className={styles.tableItemValue}>Monthly</div>
         <div className={styles.tableItemValue}>Jun 15, 2025</div>
         <div className={styles.subscriptionItemPrice}>$15.99</div>
-        <div
-          className={`${styles.subscriptionItemStatus} ${isPositive ? styles.positive : styles.negative}`}
-        >
-          <button
-            className={styles.subscriptionItemStatusSwitch}
-            onClick={() => setIsPositive((prev) => !prev)}
-          >
-            <div />
-          </button>
-          {isPositive ? "Active" : "Paused"}
-        </div>
+        <SubscriptionStatusSwitch
+          isActive={isPositive}
+          onToggle={() => setIsPositive((prev) => !prev)}
+        />
       </div>
 
       <div className={styles.tableItem}>
@@ -110,17 +83,10 @@ export default function SubscriptionTable() {
         <div className={styles.tableItemValue}>Monthly</div>
         <div className={styles.tableItemValue}>Jun 15, 2025</div>
         <div className={styles.subscriptionItemPrice}>$15.99</div>
-        <div
-          className={`${styles.subscriptionItemStatus} ${isPositive ? styles.positive : styles.negative}`}
-        >
-          <button
-            className={styles.subscriptionItemStatusSwitch}
-            onClick={() => setIsPositive((prev) => !prev)}
-          >
-            <div />
-          </button>
-          {isPositive ? "Active" : "Paused"}
-        </div>
+        <SubscriptionStatusSwitch
+          isActive={isPositive}
+          onToggle={() => setIsPositive((prev) => !prev)}
+        />
       </div>
 
       <div className={styles.tableItem}>
@@ -131,17 +97,10 @@ export default function SubscriptionTable() {
         <div className={styles.tableItemValue}>Monthly</div>
         <div className={styles.tableItemValue}>Jun 15, 2025</div>
         <div className={styles.subscriptionItemPrice}>$15.99</div>
-        <div
-          className={`${styles.subscriptionItemStatus} ${isPositive ? styles.positive : styles.negative}`}
-        >
-          <button
-            className={styles.subscriptionItemStatusSwitch}
-            onClick={() => setIsPositive((prev) => !prev)}
-          >
-            <div />
-          </button>
-          {isPositive ? "Active" : "Paused"}
-        </div>
+        <SubscriptionStatusSwitch
+          isActive={isPositive}
+          onToggle={() => setIsPositive((prev) => !prev)}
+        />
       </div>
     </section>
   );
