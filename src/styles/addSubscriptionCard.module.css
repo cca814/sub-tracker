@@ -83,6 +83,17 @@
   color: var(--text-secondary);
 }
 
+.input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .cycleSwitch {
   border: 1px solid var(--input-border);
   border-radius: var(--input-border-radius);
@@ -92,6 +103,7 @@
   height: 44px;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .cycleSwitch > div {

@@ -43,3 +43,25 @@
   border-radius: 100px;
   background: white;
 }
+
+.subscriptionItemStatusSwitch:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.subscriptionItemStatusSwitch:focus-visible {
+  outline: 2px solid var(--button-background);
+  outline-offset: 3px;
+}
+
+.statusError {
+  margin-top: 4px;
+  color: var(--negative-red);
+  font-size: 11px;
+}
+
+.statusControl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

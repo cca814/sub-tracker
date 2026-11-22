@@ -15,8 +15,15 @@ import {
 import "@daypicker/react/style.css";
 import styles from "@/styles/datePicker.module.css";
 
-export default function DatePicker({ id, name }: { id: string; name: string }) {
-  const [selected, setSelected] = useState<Date>();
+interface DatePickerProps {
+  id: string;
+  name: string;
+  value: string;
+  onChange: (value: string) => void;
+}
+
+export default function DatePicker({ id, name, value, onChange }: DatePickerProps) {
+  const selected = value ? new Date(`${value}T00:00:00`) : undefined;
   const [open, setOpen] = useState(false);
   const {
     refs: { setReference, setFloating },
@@ -38,9 +45,13 @@ export default function DatePicker({ id, name }: { id: string; name: string }) {
     dismiss,
     role,
   ]);
-  const value = selected
-    ? `${selected.getFullYear()}-${String(selected.getMonth() + 1).padStart(2, "0")}-${String(selected.getDate()).padStart(2, "0")}`
-    : "";
+  const handleDateChange = (date: Date | undefined) => {
+    const nextValue = date
+      ? `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`
+      : "";
+    onChange(nextValue);
+    setOpen(false);
+  };
 
   return (
     <>
@@ -93,28 +104,19 @@ export default function DatePicker({ id, name }: { id: string; name: string }) {
               fixedWeeks
               defaultMonth={selected}
               selected={selected}
-              onSelect={(date) => {
-                setSelected(date);
-                setOpen(false);
-              }}
+              onSelect={handleDateChange}
               className={styles.calendar}
             />
             <div className={styles.footer}>
               <button
                 type="button"
-                onClick={() => {
-                  setSelected(undefined);
-                  setOpen(false);
-                }}
+                onClick={() => handleDateChange(undefined)}
               >
                 Clear
               </button>
               <button
                 type="button"
-                onClick={() => {
-                  setSelected(new Date());
-                  setOpen(false);
-                }}
+                onClick={() => handleDateChange(new Date())}
               >
                 Today
               </button>
